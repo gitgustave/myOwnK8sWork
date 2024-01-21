@@ -1,0 +1,16 @@
+   This two steps will create a exposed http pods 
+
+
+1- Create a deployment
+ # kubectl create deployment my-httpd --replicas=2 --image=httpd --port=80 
+Verification: 
+   # kubectl get deployment
+   # kubectl get pods
+
+2- Create a service to expose the pod ( Created from the deployment)
+ # kubectl expose deployment my-httpd --port=8080 --target-port=80 --type=LoadBalancer
+
+Verification: 
+ # kubectl get svc
+curl workernode:portnumber 
+curl ip:32651
