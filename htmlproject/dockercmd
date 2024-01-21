@@ -1,0 +1,6 @@
+     # Create image and push to docker registry
+sudo docker login
+docker build  -t ghhttpd .
+sudo docker tag 431aff8177c7 gustavepablo4/ghhttp:v1
+sudo docker push gustavepablo4/ghhttp:v1
+

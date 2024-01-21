@@ -19,6 +19,8 @@ spec:
     spec:
       containers:
       - name: my-apache-container1
-        image: httpd
+        #image: httpd
+        #image: gustavepablo4/ghhttp
+        image: https://hub.docker.com/r/gustavepablo4/ghhttp
         ports:
         - containerPort: 80
